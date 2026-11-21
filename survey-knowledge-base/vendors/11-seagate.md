@@ -124,7 +124,7 @@ SK hynix 的 Kyung Soo Lee、Jin Na Yang 与 Seagate 的 Thomas Prohofsky 研究
 为单独观察 HDD 带宽，作者让 I/O 绕过 SSD，用 15 个用户、QPS 1、ISL 21K、OSL 100、运行 50 秒的配置观察单轮恢复。多盘组成一个逻辑卷，将同一批 KV 的读取分布到多块盘。图 20 给出首 token 时间，图 21 同时画出峰值和平均读带宽。[原文第 14 页，图 20、21](https://www.seagate.com/content/dam/seagate/assets/resources/enabling-inference-at-massive-scale-with-hybrid-storage-for-kv-cache-offloading/files/kv-caching-white-paper.pdf#page=14)
 
 | HDD 数量 | 数据性质 | 单轮 TTFT（秒） | 峰值 / 平均读带宽（GB/s） |
-|---|---|---:|---:|
+|---|---|---|---|
 | 4 | 实测 | 67.89 | 0.70 / 0.37 |
 | 8 | 实测 | 34.43 | 1.10 / 0.75 |
 | 12 | 实测 | 19.88 | 1.50 / 1.26 |

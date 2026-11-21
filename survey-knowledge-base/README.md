@@ -34,14 +34,18 @@ Every vendor chapter includes a 「放置策略：哪些 KV 放到哪一层」 s
 | 01 | 2.1 SGLang | [SGLang：整体架构与 KV 缓存管理](inference-engines/01-sglang-impl.md) | SGLang KV management implementation: RadixCache, memory pools, request lifecycle, HiCache tiers (with block diagrams) |
 | 02 | 2.1 SGLang | [SGLang：HDD 接入方案与改动范围](inference-engines/02-sglang.md) | HiCache file backend, tiering options and required changes |
 | 03 | 2.1 SGLang | [可行性验证与判定标准](inference-engines/03-validation.md) | Validation plan and pass criteria |
-| 04 | 2.2 vLLM | [vLLM：整体架构与 KV 缓存管理](inference-engines/04-vllm.md) | V1 process architecture, request scheduling, GPU execution, prefix cache and KV connectors |
-| 05 | 2.2 vLLM | [vLLM：HDD 接入方案与改动范围](inference-engines/05-vllm-hdd.md) | Filesystem prototype, chunk layout, writeback and recovery |
-| 06 | 2.2 vLLM | [vLLM：可行性验证与判定标准](inference-engines/06-vllm-validation.md) | Correctness, TTFT and restart tests |
-| 07 | 2.3 DeepInfer (DeepSeek) | [DeepInfer：整体架构与 KV 缓存管理](inference-engines/07-deepseek.md) | Online service topology, stage-level routing, offline engine loop and KV reuse |
-| 08 | 2.3 DeepInfer (DeepSeek) | [DeepInfer（DeepSeek）：HDD 接入方案与改动范围](inference-engines/08-deepseek-hdd.md) | 3FS baseline, proposed HDD cold tier and changes to the read/write paths |
-| 09 | 2.3 DeepInfer (DeepSeek) | [DeepInfer：可行性验证与判定标准](inference-engines/09-deepseek-validation.md) | Reuse intervals, read deadlines and fault injection |
-| 10 | 2.4 Enterprise research | [NVIDIA：完整 KV 是否值得长期保存](inference-engines/10-context-feasibility.md) | Value of retaining full long-context KV |
-| 11 | 2.5 硬件协同 | [推理引擎与硬件协同：计算、互连、网络与存储](inference-engines/11-engine-hardware.md) | Compute and memory, GPU/NIC topology, RDMA fabrics, storage paths, bandwidth budgets and validation |
+| 04 | 2.1 SGLang | [SGLang：与具体硬件的对应](inference-engines/04-sglang-hw.md) | Supported hardware matrix, HiCache tiers mapped to HBM / host DRAM / NVMe / RDMA / HDD, KV sizing and fetch-time worked example, LMSYS reference deployments, HDD-tier sizing |
+| 05 | 2.2 vLLM | [vLLM：整体架构与 KV 缓存管理](inference-engines/05-vllm.md) | V1 process architecture, request scheduling, GPU execution, prefix cache and KV connectors |
+| 06 | 2.2 vLLM | [vLLM：HDD 接入方案与改动范围](inference-engines/06-vllm-hdd.md) | Filesystem prototype, chunk layout, writeback and recovery |
+| 07 | 2.2 vLLM | [vLLM：可行性验证与判定标准](inference-engines/07-vllm-validation.md) | Correctness, TTFT and restart tests |
+| 08 | 2.2 vLLM | [vLLM：与具体硬件的对应](inference-engines/08-vllm-hw.md) | Backend/plugin hardware matrix, KV tiers and connectors mapped to hardware, Llama-3.1-70B / DeepSeek-V3 worked example, cloud reference deployments, HDD-tier sizing |
+| 09 | 2.3 DeepInfer (DeepSeek) | [DeepInfer：整体架构与 KV 缓存管理](inference-engines/09-deepseek.md) | Online service topology, stage-level routing, offline engine loop and KV reuse |
+| 10 | 2.3 DeepInfer (DeepSeek) | [DeepInfer（DeepSeek）：HDD 接入方案与改动范围](inference-engines/10-deepseek-hdd.md) | 3FS baseline, proposed HDD cold tier and changes to the read/write paths |
+| 11 | 2.3 DeepInfer (DeepSeek) | [DeepInfer：可行性验证与判定标准](inference-engines/11-deepseek-validation.md) | Reuse intervals, read deadlines and fault injection |
+| 12 | 2.3 DeepInfer (DeepSeek) | [DeepInfer：与具体硬件的对应](inference-engines/12-deepseek-hw.md) | SM100 / Ascend 950 support, V3–V4.1 deployment shapes, 3FS cluster hardware, KV sizing and retention capacity, HDD-tier sizing |
+| 13 | 2.4 Enterprise research | [NVIDIA：完整 KV 是否值得长期保存](inference-engines/13-context-feasibility.md) | Value of retaining full long-context KV |
+| 14 | 2.5 硬件协同 | [推理引擎与硬件协同：计算、互连、网络与存储](inference-engines/14-engine-hardware.md) | Compute and memory, GPU/NIC topology, RDMA fabrics, storage paths, bandwidth budgets and validation |
+| 15 | 2.5 硬件协同 | [硬件参数速查：加速器、互连、网卡、SSD 与 HDD](inference-engines/15-hw-reference.md) | Datasheet tables for accelerators, interconnects, NICs / cloud instances, SSDs and HDDs; theoretical time to fetch 1 GiB over each link |
 
 # Book II · Big data
 
@@ -80,5 +84,5 @@ Every vendor chapter includes a 「放置策略：哪些 KV 放到哪一层」 s
 
 ## Other files
 
-- [sources.md](sources.md) — all 545 cited sources with keys and URLs
+- [sources.md](sources.md) — all 610 cited sources with keys and URLs
 - [figures/](figures/) — figures extracted from the report (official diagrams, document screenshots, PDF page renders, block diagrams drawn from source code)

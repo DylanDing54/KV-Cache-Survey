@@ -118,51 +118,75 @@
   ],
   [
    "04",
-   "vLLM：整体架构与 KV 缓存管理",
-   "推理引擎 · vLLM 官方文档与固定提交源码核查",
-   "04-vllm.md"
+   "SGLang：与具体硬件的对应",
+   "引擎 × 硬件 · SGLang 固定提交文档、LMSYS 官方部署与数据手册推算",
+   "04-sglang-hw.md"
   ],
   [
    "05",
-   "vLLM：HDD 接入方案与改动范围",
-   "推理引擎 · HDD 可行性分析",
-   "05-vllm-hdd.md"
+   "vLLM：整体架构与 KV 缓存管理",
+   "推理引擎 · vLLM 官方文档与固定提交源码核查",
+   "05-vllm.md"
   ],
   [
    "06",
-   "vLLM：可行性验证与判定标准",
+   "vLLM：HDD 接入方案与改动范围",
    "推理引擎 · HDD 可行性分析",
-   "06-vllm-validation.md"
+   "06-vllm-hdd.md"
   ],
   [
    "07",
-   "DeepInfer：整体架构与 KV 缓存管理",
-   "推理系统 · DeepSeek 官方文档、开源仓库与技术报告",
-   "07-deepseek.md"
+   "vLLM：可行性验证与判定标准",
+   "推理引擎 · HDD 可行性分析",
+   "07-vllm-validation.md"
   ],
   [
    "08",
-   "DeepInfer（DeepSeek）：HDD 接入方案与改动范围",
-   "推理引擎 · HDD 可行性分析",
-   "08-deepseek-hdd.md"
+   "vLLM：与具体硬件的对应",
+   "推理引擎 · 硬件对应 · vLLM 官方安装文档、硬件插件与容量推算",
+   "08-vllm-hw.md"
   ],
   [
    "09",
-   "DeepInfer：可行性验证与判定标准",
-   "推理引擎 · HDD 可行性分析",
-   "09-deepseek-validation.md"
+   "DeepInfer：整体架构与 KV 缓存管理",
+   "推理系统 · DeepSeek 官方文档、开源仓库与技术报告",
+   "09-deepseek.md"
   ],
   [
    "10",
-   "NVIDIA：完整 KV 是否值得长期保存",
-   "需求可行性 · 企业上下文研究",
-   "10-context-feasibility.md"
+   "DeepInfer（DeepSeek）：HDD 接入方案与改动范围",
+   "推理引擎 · HDD 可行性分析",
+   "10-deepseek-hdd.md"
   ],
   [
    "11",
+   "DeepInfer：可行性验证与判定标准",
+   "推理引擎 · HDD 可行性分析",
+   "11-deepseek-validation.md"
+  ],
+  [
+   "12",
+   "DeepInfer：与具体硬件的对应",
+   "推理引擎 · 硬件对应 · DeepInfer 官方文档、3FS 实测与容量推算",
+   "12-deepseek-hw.md"
+  ],
+  [
+   "13",
+   "NVIDIA：完整 KV 是否值得长期保存",
+   "需求可行性 · 企业上下文研究",
+   "13-context-feasibility.md"
+  ],
+  [
+   "14",
    "推理引擎与硬件协同：计算、互连、网络与存储",
    "跨引擎分析 · 官方部署、设备文档与容量推算",
-   "11-engine-hardware.md"
+   "14-engine-hardware.md"
+  ],
+  [
+   "15",
+   "硬件参数速查：加速器、互连、网卡、SSD 与 HDD",
+   "参考速查 · 官方数据手册 / 产品页参数与理论下界换算",
+   "15-hw-reference.md"
   ]
  ],
  "bigdata-io": [
